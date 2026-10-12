@@ -16,7 +16,7 @@ const guarderias = [
         imagen: "assets/guarderias/BernardoQuintana.png",
         imagenDetalle: "../assets/guarderias/BernardoQuintana.png",
         direccion: "",
-        googleMaps: "",
+        googleMaps: "https://maps.app.goo.gl/vptgti4Lck47uo9G8",
         descripcion: "",
         galeria: [],
         videos: []
@@ -34,7 +34,7 @@ const guarderias = [
         imagen: "assets/guarderias/Acambaro.png",
         imagenDetalle: "../assets/guarderias/Acambaro.png",
         direccion: "",
-        googleMaps: "",
+        googleMaps: "https://maps.app.goo.gl/gP4jAwnZpLbECYio6",
         descripcion: "",
         galeria: [],
         videos: []
@@ -52,7 +52,7 @@ const guarderias = [
         imagen: "assets/guarderias/Carrillo.png",
         imagenDetalle: "../assets/guarderias/Carrillo.png",
         direccion: "",
-        googleMaps: "",
+        googleMaps: "https://maps.app.goo.gl/PVGiDuFmFvKD3Hhx8",
         descripcion: "",
         galeria: [],
         videos: []
@@ -70,7 +70,7 @@ const guarderias = [
         imagen: "assets/guarderias/CerritoColorado.png",
         imagenDetalle: "../assets/guarderias/CerritoColorado.png",
         direccion: "",
-        googleMaps: "",
+        googleMaps: "https://maps.app.goo.gl/s7ZXzY9CiJjRqXEF9",
         descripcion: "",
         galeria: [],
         videos: []
@@ -88,7 +88,7 @@ const guarderias = [
         imagen: "assets/guarderias/SanJoseDeLosOlvera.png",
         imagenDetalle: "../assets/guarderias/SanJoseDeLosOlvera.png",
         direccion: "",
-        googleMaps: "",
+        googleMaps: "https://share.google/DgXyWwitHjDxFrDGT",
         descripcion: "",
         galeria: [],
         videos: []
@@ -106,7 +106,7 @@ const guarderias = [
         imagen: "assets/guarderias/MoisesSolana.png",
         imagenDetalle: "../assets/guarderias/MoisesSolana.png",
         direccion: "",
-        googleMaps: "",
+        googleMaps: "https://maps.app.goo.gl/g1tLVcn31XMWoost5",
         descripcion: "",
         galeria: [],
         videos: []
