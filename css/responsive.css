@@ -1,0 +1,172 @@
+/* ==========================================================================
+   GUARDERÍAS EBOR QUERÉTARO — REGLAS RESPONSIVAS
+   Adaptación: Computadora (3 cols), Tableta (2 cols) y Celular (1 col)
+   ========================================================================== */
+
+/* TABLETAS (Pantallas medianas hasta 992px) */
+@media (max-width: 992px) {
+    .cuadricula-guarderias {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .contenido-principal {
+        padding: 32px 20px 48px;
+    }
+
+    .cuadricula-contacto {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .galeria-preparada-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* CELULARES (Pantallas pequeñas hasta 640px) */
+@media (max-width: 640px) {
+    /* Hero y Atmósfera infantil */
+    .hero-cielo {
+        padding: 24px 16px 36px;
+    }
+
+    .logo-principal {
+        max-width: 175px;
+    }
+
+    .sol-sonriente {
+        top: 8px;
+        right: 12px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .nube-1 {
+        top: 12px;
+        left: 8px;
+        width: 75px;
+    }
+
+    .nube-2 {
+        bottom: 8px;
+        right: 12px;
+        width: 80px;
+    }
+
+    .nube-3 {
+        display: none; /* Reducir saturación visual en móviles */
+    }
+
+    .arcoiris-sutil {
+        top: -10px;
+        left: -20px;
+        width: 150px;
+    }
+
+    .hero-titulo {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitulo {
+        font-size: 0.98rem;
+    }
+
+    /* Sección Principal */
+    .contenido-principal {
+        padding: 24px 14px 44px;
+    }
+
+    .seccion-cabecera {
+        margin-bottom: 24px;
+    }
+
+    .seccion-titulo {
+        font-size: 1.5rem;
+    }
+
+    .seccion-subtitulo {
+        font-size: 0.95rem;
+    }
+
+    /* 1 Columna en Celulares */
+    .cuadricula-guarderias {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .tarjeta-imagen-contenedor {
+        height: 200px;
+    }
+
+    .tarjeta-cuerpo {
+        padding: 18px 16px 20px;
+    }
+
+    .tarjeta-titulo {
+        font-size: 1.22rem;
+    }
+
+    /* Llamada directa y botones cómodos para pulsar */
+    .telefono-link {
+        width: 100%;
+        justify-content: center;
+        font-size: 1.05rem;
+        padding: 11px 14px;
+    }
+
+    .btn-conocer {
+        min-height: 48px;
+        font-size: 1.02rem;
+    }
+
+    /* Página de Detalle */
+    .ficha-guarderia {
+        padding: 20px 16px 28px;
+        border-radius: 12px;
+    }
+
+    .fachada-marco, .fachada-foto-grande {
+        max-height: 280px;
+    }
+
+    .ficha-nombre {
+        font-size: 1.6rem;
+    }
+
+    .galeria-preparada-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .btn-llamar {
+        width: 100%;
+        min-height: 48px;
+        font-size: 1.05rem;
+    }
+
+    .btn-como-llegar {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn-regresar-catalogo {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+    }
+
+    .detalle-header {
+        padding: 12px 14px;
+    }
+
+    .btn-volver-arriba {
+        padding: 6px 12px;
+        font-size: 0.88rem;
+    }
+
+    .detalle-logo-img {
+        height: 42px;
+    }
+}
