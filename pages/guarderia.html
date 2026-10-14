@@ -25,14 +25,17 @@
     <!-- Barra de navegación superior y botón volver -->
     <header class="detalle-header">
         <div class="detalle-nav-contenedor">
-            <a href="../index.html" class="btn-volver-arriba" id="btn-volver-superior">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
-                <span>Volver al inicio</span>
-            </a>
+            <div class="detalle-nav-izquierda">
+                <a href="../index.html" class="btn-volver-arriba" id="btn-volver-superior">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Volver al inicio</span>
+                </a>
+                <a href="inscripciones.html" class="btn-nav-secundario">Inscripciones</a>
+            </div>
 
             <a href="../index.html" class="detalle-logo-enlace" aria-label="Ir al inicio de Guarderías Ebor">
                 <img src="../assets/img/banner-principal.png" alt="Logotipo Guarderías Ebor Querétaro"
@@ -209,18 +212,23 @@
             // Estructura completa de la página individual
             contenedor.innerHTML = `
                 <article class="ficha-guarderia">
-                    <!-- 1 y 2: Nombre y Código -->
-                    <div class="ficha-cabecera">
-                        <div class="ficha-titulos">
-                            <span class="ficha-codigo-badge">Código oficial: ${guarderia.codigo}</span>
-                            <h1 class="ficha-nombre">${guarderia.nombre}</h1>
+                    <section class="ficha-resumen" aria-label="Resumen del plantel">
+                        <div class="ficha-seccion-fachada">
+                            <div class="fachada-marco">
+                                <img src="${guarderia.imagenDetalle}" alt="Fachada oficial de Guardería ${guarderia.nombre}" class="fachada-foto-grande">
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- 3: Fotografía principal de la fachada -->
-                    <section class="ficha-seccion-fachada" aria-label="Fotografía de la fachada">
-                        <div class="fachada-marco">
-                            <img src="${guarderia.imagenDetalle}" alt="Fachada oficial de Guardería ${guarderia.nombre}" class="fachada-foto-grande">
+                        <div class="ficha-identidad">
+                            <h1 class="ficha-nombre">${guarderia.nombre}</h1>
+                            <span class="ficha-codigo-badge">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                                    <path d="M7 8h10M7 12h4m-4 4h10"></path>
+                                </svg>
+                                <span>Código IMSS: ${guarderia.codigo}</span>
+                            </span>
+                            <div class="descripcion-parrafo">${descripcionHtml.replace(/^<p class="descripcion-parrafo">|<\/p>$/g, "")}</div>
+                            <img src="../assets/icons/happy.png" class="ilustracion-ficha" alt="" aria-hidden="true" width="512" height="512">
                         </div>
                     </section>
 
@@ -247,14 +255,14 @@
                                     ${mapsHtml}
                                 </div>
                             </div>
-                        </div>
-                    </section>
 
-                    <!-- 7: Descripción e información general -->
-                    <section class="ficha-seccion-bloque" aria-label="Información general">
-                        <h2 class="seccion-bloque-titulo">Información general de la guardería</h2>
-                        <div class="contenido-bloque-info">
-                            ${descripcionHtml}
+                            <div class="tarjeta-contacto-item tarjeta-inscripcion-cta">
+                                <h2 class="contacto-subtitulo">Cómo inscribir</h2>
+                                <p class="contacto-indicacion">Consulta el proceso oficial del IMSS y revisa la guardería de tu elección.</p>
+                                <a href="inscripciones.html" class="btn-info-inscripcion">
+                                    <span>Ver proceso de inscripción</span>
+                                </a>
+                            </div>
                         </div>
                     </section>
 

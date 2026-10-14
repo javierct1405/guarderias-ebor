@@ -29,7 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="pages/guarderia.html?id=${encodeURIComponent(guarderia.id)}">${guarderia.nombre}</a>
                 </h3>
                 <div class="tarjeta-codigo">
-                    <span class="codigo-etiqueta">Código:</span>
+                    <span class="codigo-etiqueta">
+                        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                            <path d="M7 8h10M7 12h4m-4 4h10"></path>
+                        </svg>
+                        <span>Código IMSS</span>
+                    </span>
                     <strong class="codigo-valor">${guarderia.codigo}</strong>
                 </div>
                 <div class="tarjeta-telefono">

@@ -22,10 +22,31 @@
     .galeria-preparada-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .pasos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .planteles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 /* CELULARES (Pantallas pequeñas hasta 640px) */
 @media (max-width: 640px) {
+    .nav-inner {
+        flex-direction: column;
+        padding: 12px 14px;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+    }
+
+    .nav-cta {
+        width: 100%;
+    }
+
     /* Hero y Atmósfera infantil */
     .hero-cielo {
         padding: 24px 16px 36px;
@@ -62,6 +83,26 @@
         top: -10px;
         left: -20px;
         width: 150px;
+    }
+
+    .ilustracion-abeja {
+        top: 14px;
+        left: 92px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .ilustracion-mariposa {
+        right: 18px;
+        bottom: 18px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .ilustracion-catalogo {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
     }
 
     .hero-titulo {
@@ -126,8 +167,18 @@
         border-radius: 12px;
     }
 
-    .fachada-marco, .fachada-foto-grande {
-        max-height: 280px;
+    .ficha-resumen {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 22px;
+    }
+
+    .fachada-marco {
+        max-height: 220px;
+    }
+
+    .ficha-identidad {
+        padding: 18px;
     }
 
     .ficha-nombre {
@@ -161,6 +212,24 @@
         padding: 12px 14px;
     }
 
+    .detalle-nav-contenedor {
+        gap: 12px;
+    }
+
+    .detalle-nav-izquierda {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-volver-arriba,
+    .btn-nav-secundario,
+    .btn-info-inscripcion,
+    .btn-imss-principal,
+    .btn-imss-secundario {
+        width: 100%;
+        justify-content: center;
+    }
+
     .btn-volver-arriba {
         padding: 6px 12px;
         font-size: 0.88rem;
@@ -168,5 +237,38 @@
 
     .detalle-logo-img {
         height: 42px;
+    }
+
+    .inscripciones-hero,
+    .pasos-panel,
+    .faq-panel,
+    .plantel-panel {
+        padding: 22px 16px;
+    }
+
+    .pasos-grid,
+    .planteles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .ficha-resumen {
+        grid-template-columns: 1fr;
+    }
+
+    .cuadricula-contacto {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

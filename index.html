@@ -22,37 +22,25 @@
 
 <body>
 
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand" aria-label="Inicio de Guarderías Ebor">
+                <img src="assets/img/banner-principal.png" alt="Guarderías Ebor" class="nav-brand-image">
+            </a>
+            <div class="nav-links" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="#guarderias">Guarderías</a>
+                <a href="pages/inscripciones.html">Inscripciones</a>
+            </div>
+            <a href="pages/inscripciones.html" class="nav-cta">Iniciar inscripción</a>
+        </div>
+    </nav>
+
     <!-- Encabezado con atmósfera infantil-institucional (Cielo, sol, nubes y arcoíris) -->
     <header class="hero-cielo">
         <!-- Elementos decorativos de fondo sutiles -->
         <div class="decoracion-cielo" aria-hidden="true">
-            <!-- Sol infantil sonriente -->
-            <div class="sol-sonriente">
-                <svg viewBox="0 0 100 100" class="sol-svg">
-                    <!-- Rayos del sol -->
-                    <g class="rayos-sol" stroke="#ffb703" stroke-width="4" stroke-linecap="round">
-                        <line x1="50" y1="6" x2="50" y2="16" />
-                        <line x1="50" y1="84" x2="50" y2="94" />
-                        <line x1="6" y1="50" x2="16" y2="50" />
-                        <line x1="84" y1="50" x2="94" y2="50" />
-                        <line x1="19" y1="19" x2="26" y2="26" />
-                        <line x1="74" y1="74" x2="81" y2="81" />
-                        <line x1="19" y1="81" x2="26" y2="74" />
-                        <line x1="74" y1="26" x2="81" y2="19" />
-                    </g>
-                    <!-- Disco solar -->
-                    <circle cx="50" cy="50" r="28" fill="#ffd166" stroke="#fb8500" stroke-width="2.5" />
-                    <!-- Ojos sonrientes -->
-                    <circle cx="41" cy="45" r="3.2" fill="#3d2b1f" />
-                    <circle cx="59" cy="45" r="3.2" fill="#3d2b1f" />
-                    <!-- Chapitas mejillas -->
-                    <ellipse cx="36" cy="53" rx="3.5" ry="2" fill="#ff758f" opacity="0.6" />
-                    <ellipse cx="64" cy="53" rx="3.5" ry="2" fill="#ff758f" opacity="0.6" />
-                    <!-- Sonrisa infantil -->
-                    <path d="M42 54 Q50 64 58 54" stroke="#3d2b1f" stroke-width="2.5" fill="none"
-                        stroke-linecap="round" />
-                </svg>
-            </div>
+            <img src="assets/icons/moon.png" class="sol-sonriente" alt="" aria-hidden="true" width="512" height="512">
 
             <!-- Nubes blancas decorativas -->
             <div class="nube nube-1">
@@ -92,6 +80,9 @@
                         opacity="0.45" />
                 </svg>
             </div>
+
+            <img src="assets/icons/smiling.png" class="ilustracion-abeja" alt="" aria-hidden="true" width="512" height="512">
+            <img src="assets/icons/butterfly.png" class="ilustracion-mariposa" alt="" aria-hidden="true" width="512" height="512">
         </div>
 
         <!-- Contenido principal del encabezado -->
@@ -114,7 +105,10 @@
     <main class="contenido-principal">
         <section id="guarderias" class="seccion-guarderias" aria-labelledby="titulo-seccion-guarderias">
             <div class="seccion-cabecera">
-                <h2 id="titulo-seccion-guarderias" class="seccion-titulo">Conoce nuestras guarderías</h2>
+                <h2 id="titulo-seccion-guarderias" class="seccion-titulo">
+                    <span>Conoce nuestras guarderías</span>
+                    <img src="assets/icons/happy%20(1).png" class="ilustracion-catalogo" alt="" aria-hidden="true" width="512" height="512">
+                </h2>
                 <p class="seccion-subtitulo">Selecciona una guardería para conocer sus instalaciones y datos de contacto
                 </p>
             </div>
@@ -125,7 +119,7 @@
     </main>
 
     <!-- Pie de página institucional -->
-    <footer class="pie-pagina">
+    <footer class="pie-pagina" id="pie-pagina">
         <div class="pie-contenido">
             <p class="pie-marca"><strong>Guarderías Ebor Querétaro</strong></p>
             <p class="pie-nota">Atención telefónica directa en cada uno de nuestros seis planteles</p>
@@ -135,7 +129,7 @@
 
     <!-- Scripts JavaScript -->
     <script src="js/guarderias.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
 
 </body>
 
