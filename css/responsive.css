@@ -5,6 +5,12 @@
 
 /* TABLETAS (Pantallas medianas hasta 992px) */
 @media (max-width: 992px) {
+    .contenedor-hero {
+        max-width: 760px;
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 34px;
+    }
+
     .cuadricula-guarderias {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
@@ -52,15 +58,22 @@
         padding: 24px 16px 36px;
     }
 
-    .logo-principal {
-        max-width: 175px;
+    .contenedor-hero {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
     }
 
-    .sol-sonriente {
-        top: 8px;
-        right: 12px;
-        width: 60px;
-        height: 60px;
+    .hero-textos {
+        text-align: center;
+    }
+
+    .hero-datos {
+        justify-content: center;
+    }
+
+    .logo-principal {
+        max-width: 175px;
     }
 
     .nube-1 {
@@ -77,26 +90,6 @@
 
     .nube-3 {
         display: none; /* Reducir saturación visual en móviles */
-    }
-
-    .arcoiris-sutil {
-        top: -10px;
-        left: -20px;
-        width: 150px;
-    }
-
-    .ilustracion-abeja {
-        top: 14px;
-        left: 92px;
-        width: 42px;
-        height: 42px;
-    }
-
-    .ilustracion-mariposa {
-        right: 18px;
-        bottom: 18px;
-        width: 36px;
-        height: 36px;
     }
 
     .ilustracion-catalogo {
@@ -137,7 +130,7 @@
     }
 
     .tarjeta-imagen-contenedor {
-        height: 200px;
+        height: 230px;
     }
 
     .tarjeta-cuerpo {
@@ -190,7 +183,7 @@
         gap: 12px;
     }
 
-    .btn-llamar {
+    .btn-accion-plantel {
         width: 100%;
         min-height: 48px;
         font-size: 1.05rem;
@@ -223,7 +216,6 @@
 
     .btn-volver-arriba,
     .btn-nav-secundario,
-    .btn-info-inscripcion,
     .btn-imss-principal,
     .btn-imss-secundario {
         width: 100%;

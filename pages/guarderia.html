@@ -112,8 +112,8 @@
             let mapsHtml = "";
             if (guarderia.googleMaps && guarderia.googleMaps.trim() !== "") {
                 mapsHtml = `
-                    <a href="${guarderia.googleMaps}" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <a href="${guarderia.googleMaps}" target="_blank" rel="noopener noreferrer" class="btn-accion-plantel">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
                         </svg>
                         <span>Cómo llegar (Google Maps)</span>
@@ -146,67 +146,74 @@
                     </div>`;
             }
 
-            // Preparar galería de fotos
-            let galeriaHtml = "";
+            // Mantener los espacios reservados hasta incorporar fotografías reales.
+            let galeriaSeccionHtml = "";
             if (guarderia.galeria && guarderia.galeria.length > 0) {
-                galeriaHtml = `
-                    <div class="galeria-grid">
-                        ${guarderia.galeria.map(img => `
-                            <div class="galeria-item">
-                                <img src="${img}" alt="Instalaciones ${guarderia.nombre}" loading="lazy">
-                            </div>
-                        `).join("")}
-                    </div>`;
+                galeriaSeccionHtml = `
+                    <section class="ficha-seccion-bloque" aria-label="Galería de instalaciones">
+                        <h2 class="seccion-bloque-titulo seccion-titulo-con-icono">Galería de instalaciones
+                            <img src="../assets/icons/happy%20(1).png" alt="" aria-hidden="true">
+                        </h2>
+                        <div class="galeria-grid">
+                            ${guarderia.galeria.map(img => `
+                                <div class="galeria-item">
+                                    <img src="${img}" alt="Instalaciones ${guarderia.nombre}" loading="lazy">
+                                </div>
+                            `).join("")}
+                        </div>
+                    </section>`;
             } else {
-                galeriaHtml = `
-                    <div class="galeria-preparada-grid">
-                        <div class="slot-preparado">
-                            <svg class="slot-icono" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                <polyline points="21 15 16 10 5 21"></polyline>
-                            </svg>
-                            <span class="slot-texto">Espacio preparado para fotografía de salas de atención</span>
+                galeriaSeccionHtml = `
+                    <section class="ficha-seccion-bloque" aria-label="Galería de instalaciones">
+                        <h2 class="seccion-bloque-titulo seccion-titulo-con-icono">Galería de instalaciones
+                            <img src="../assets/icons/happy%20(1).png" alt="" aria-hidden="true">
+                        </h2>
+                        <div class="galeria-preparada-grid">
+                            ${["Salas de atención", "Patio y áreas de juego", "Áreas comunes"].map(nombre => `
+                                <div class="slot-preparado">
+                                    <svg class="slot-icono" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                        <polyline points="21 15 16 10 5 21"></polyline>
+                                    </svg>
+                                    <span class="slot-texto">${nombre}</span>
+                                    <small class="slot-estado">Fotografía próximamente</small>
+                                </div>
+                            `).join("")}
                         </div>
-                        <div class="slot-preparado">
-                            <svg class="slot-icono" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                <polyline points="21 15 16 10 5 21"></polyline>
-                            </svg>
-                            <span class="slot-texto">Espacio preparado para fotografía de patio y áreas de juego</span>
-                        </div>
-                        <div class="slot-preparado">
-                            <svg class="slot-icono" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                <polyline points="21 15 16 10 5 21"></polyline>
-                            </svg>
-                            <span class="slot-texto">Espacio preparado para fotografía de áreas comunes</span>
-                        </div>
-                    </div>`;
+                    </section>`;
             }
 
-            // Preparar sección de videos
-            let videosHtml = "";
+            // Mantener también un espacio claro para futuros recorridos.
+            let videosSeccionHtml = "";
             if (guarderia.videos && guarderia.videos.length > 0) {
-                videosHtml = `
-                    <div class="videos-grid">
-                        ${guarderia.videos.map(vid => `
-                            <div class="video-item">
-                                <video controls src="${vid}" class="video-reproductor"></video>
-                            </div>
-                        `).join("")}
-                    </div>`;
+                videosSeccionHtml = `
+                    <section class="ficha-seccion-bloque" aria-label="Videos o recorridos">
+                        <h2 class="seccion-bloque-titulo seccion-titulo-con-icono">Videos y recorridos
+                            <img src="../assets/icons/smiling.png" alt="" aria-hidden="true">
+                        </h2>
+                        <div class="videos-grid">
+                            ${guarderia.videos.map(vid => `
+                                <div class="video-item">
+                                    <video controls src="${vid}" class="video-reproductor"></video>
+                                </div>
+                            `).join("")}
+                        </div>
+                    </section>`;
             } else {
-                videosHtml = `
-                    <div class="video-preparado-caja">
-                        <svg class="slot-icono-video" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                        </svg>
-                        <p class="texto-preparado-video">Espacio preparado para videos o recorridos virtuales de las instalaciones.</p>
-                    </div>`;
+                videosSeccionHtml = `
+                    <section class="ficha-seccion-bloque" aria-label="Videos o recorridos">
+                        <h2 class="seccion-bloque-titulo seccion-titulo-con-icono">Videos y recorridos
+                            <img src="../assets/icons/smiling.png" alt="" aria-hidden="true">
+                        </h2>
+                        <div class="video-preparado-caja">
+                            <svg class="slot-icono-video" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                <rect x="1" y="5" width="15" height="14" rx="2"></rect>
+                            </svg>
+                            <p class="texto-preparado-video">Próximamente podrás conocer este plantel mediante un recorrido.</p>
+                        </div>
+                    </section>`;
             }
 
             // Estructura completa de la página individual
@@ -219,6 +226,7 @@
                             </div>
                         </div>
                         <div class="ficha-identidad">
+                            <p class="ficha-kicker">Plantel Guarderías Ebor</p>
                             <h1 class="ficha-nombre">${guarderia.nombre}</h1>
                             <span class="ficha-codigo-badge">
                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -234,12 +242,24 @@
 
                     <!-- 4, 5 y 6: Teléfono para llamar, Dirección y Cómo llegar -->
                     <section class="ficha-seccion-contacto" aria-label="Contacto y ubicación">
+                        <div class="contacto-cabecera">
+                            <div>
+                                <p class="ficha-kicker">Información útil</p>
+                                <h2>Contacto y siguientes pasos</h2>
+                            </div>
+                            <img src="../assets/icons/butterfly.png" alt="" aria-hidden="true" class="ilustracion-contacto">
+                        </div>
                         <div class="cuadricula-contacto">
                             <!-- 4: Número telefónico con botón para llamar -->
                             <div class="tarjeta-contacto-item tarjeta-tel-accion">
-                                <h2 class="contacto-subtitulo">Teléfono de atención</h2>
+                                <div class="contacto-titulo-fila">
+                                    <span class="contacto-icono" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                    </span>
+                                    <h2 class="contacto-subtitulo">Teléfono de atención</h2>
+                                </div>
                                 <p class="contacto-indicacion">Llamada directa desde tu dispositivo:</p>
-                                <a href="tel:${guarderia.telefono}" class="btn-llamar" aria-label="Llamar a Guardería ${guarderia.nombre} al ${guarderia.telefonoFormato}">
+                                <a href="tel:${guarderia.telefono}" class="btn-accion-plantel" aria-label="Llamar a Guardería ${guarderia.nombre} al ${guarderia.telefonoFormato}">
                                     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                     </svg>
@@ -249,7 +269,12 @@
 
                             <!-- 5 y 6: Dirección física y Cómo llegar -->
                             <div class="tarjeta-contacto-item">
-                                <h2 class="contacto-subtitulo">Ubicación y dirección</h2>
+                                <div class="contacto-titulo-fila">
+                                    <span class="contacto-icono" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    </span>
+                                    <h2 class="contacto-subtitulo">Ubicación y dirección</h2>
+                                </div>
                                 ${direccionHtml}
                                 <div class="contenedor-como-llegar">
                                     ${mapsHtml}
@@ -257,26 +282,25 @@
                             </div>
 
                             <div class="tarjeta-contacto-item tarjeta-inscripcion-cta">
-                                <h2 class="contacto-subtitulo">Cómo inscribir</h2>
+                                <div class="contacto-titulo-fila">
+                                    <span class="contacto-icono" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                                    </span>
+                                    <h2 class="contacto-subtitulo">Cómo inscribir</h2>
+                                </div>
                                 <p class="contacto-indicacion">Consulta el proceso oficial del IMSS y revisa la guardería de tu elección.</p>
-                                <a href="inscripciones.html" class="btn-info-inscripcion">
+                                <a href="inscripciones.html" class="btn-accion-plantel">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                    </svg>
                                     <span>Ver proceso de inscripción</span>
                                 </a>
                             </div>
                         </div>
                     </section>
 
-                    <!-- 8: Galería de fotografías de las instalaciones -->
-                    <section class="ficha-seccion-bloque" aria-label="Galería de instalaciones">
-                        <h2 class="seccion-bloque-titulo">Galería de instalaciones</h2>
-                        ${galeriaHtml}
-                    </section>
-
-                    <!-- 9: Sección para videos o recorridos -->
-                    <section class="ficha-seccion-bloque" aria-label="Videos o recorridos">
-                        <h2 class="seccion-bloque-titulo">Videos y recorridos</h2>
-                        ${videosHtml}
-                    </section>
+                    ${galeriaSeccionHtml}
+                    ${videosSeccionHtml}
 
                     <!-- 10: Botón para regresar a la página principal -->
                     <div class="ficha-pie-navegacion">
