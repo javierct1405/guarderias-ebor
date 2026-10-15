@@ -127,7 +127,12 @@ Su ubicación en la zona de Vista Habitacional facilita un acceso práctico para
             { src: "../assets/galerias/MoisesPatio.jpeg", titulo: "Patio del plantel" },
             { src: "../assets/galerias/MoisesJuegos.jpeg", titulo: "Área de juegos" }
         ],
-        videos: []
+        videos: [
+            {
+                src: "../assets/videos/videoejemplo.mp4",
+                titulo: "Recorrido por las instalaciones"
+            }
+        ]
     }
 ];
 

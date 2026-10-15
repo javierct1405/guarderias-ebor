@@ -1152,6 +1152,39 @@ body {
     font-weight: 600;
 }
 
+.videos-grid {
+    display: grid;
+    justify-items: center;
+    gap: 18px;
+}
+
+.video-item {
+    width: min(100%, 520px);
+    margin: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid var(--color-acento-borde, #e2e8f0);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(14, 61, 103, 0.09);
+}
+
+.video-reproductor {
+    display: block;
+    width: 100%;
+    max-height: 480px;
+    background: #102f4b;
+    object-fit: contain;
+}
+
+.video-item figcaption {
+    padding: 10px 14px;
+    color: var(--azul-ebor-profundo);
+    font-family: var(--fuente-titulos);
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-align: center;
+}
+
 /* Pie de navegación de la ficha */
 .ficha-pie-navegacion {
     margin-top: 36px;

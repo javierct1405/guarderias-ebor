@@ -11,7 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contenedor.innerHTML = "";
 
-    guarderias.forEach(guarderia => {
+    const guarderiasOrdenadas = [...guarderias].sort((a, b) =>
+        a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" })
+    );
+
+    guarderiasOrdenadas.forEach(guarderia => {
         const tarjeta = document.createElement("article");
         tarjeta.className = "tarjeta-guarderia";
         tarjeta.dataset.plantel = guarderia.id;
