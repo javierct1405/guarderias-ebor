@@ -20,7 +20,10 @@ const guarderias = [
         descripcion: `Ubicada en el Parque Industrial Bernardo Quintana, Querétaro, nuestra guardería ofrece un ambiente cálido, seguro y cercano para el desarrollo de niñas y niños. Nuestro objetivo es acompañar a cada familia con atención personalizada, respeto y tranquilidad en las etapas iniciales del crecimiento.
 
 La ubicación estratégica del plantel representa una opción práctica para familias que viven o trabajan cerca de la zona industrial de Querétaro.`,
-        galeria: [],
+        galeria: [
+            { src: "../assets/galerias/BQpatio.jpeg", titulo: "Patio del plantel" },
+            { src: "../assets/galerias/BQjuegos.jpeg", titulo: "Área de juegos" }
+        ],
         videos: []
     },
     {
@@ -96,7 +99,7 @@ Nos comprometemos a brindar una atención cercana y afectuosa, respetando las ne
         imagen: "assets/guarderias/SanJoseDeLosOlvera.png",
         imagenDetalle: "../assets/guarderias/SanJoseDeLosOlvera.png",
         direccion: "Calle Monterrey #265, Col. San José de los Olvera, Corregidora, Qro., C.P. 76904.",
-        googleMaps: "https://share.google/DgXyWwitHjDxFrDGT",
+        googleMaps: "https://maps.app.goo.gl/scvPeN53kNtzxLbZ8",
         descripcion: `En Guardería San José de los Olvera buscamos crear un entorno tranquilo, seguro y cercano para cada niña y niño. El objetivo del plantel es ofrecer atención de calidad, acompañamiento constante y una experiencia de cuidado que favorezca la confianza de las familias.
 
 Nuestra ubicación ayuda a facilitar el acceso a familias de Corregidora y zonas aledañas.`,
@@ -110,9 +113,9 @@ Nuestra ubicación ayuda a facilitar el acceso a familias de Corregidora y zonas
         telefono: "4426290003",
         telefonoFormato: "(442) 629-0003",
         colorNombre: "Amarillo",
-        colorHex: "#d97706",
-        colorBg: "#fef3c7",
-        colorBorde: "#fcd34d",
+        colorHex: "#b4533c",
+        colorBg: "#fff1ed",
+        colorBorde: "#fdbaaa",
         imagen: "assets/guarderias/MoisesSolana.png",
         imagenDetalle: "../assets/guarderias/MoisesSolana.png",
         direccion: "Tomasa Estévez #50, Col. Vista Habitacional, Santiago de Querétaro, Qro., C.P. 76090.",
@@ -120,7 +123,10 @@ Nuestra ubicación ayuda a facilitar el acceso a familias de Corregidora y zonas
         descripcion: `En Guardería Moisés Solana, buscamos ofrecer un ambiente cálido, ordenado y seguro para el desarrollo de niñas y niños. El plantel está orientado a fortalecer la confianza de las familias con una atención cercana, respetuosa y acompañada.
 
 Su ubicación en la zona de Vista Habitacional facilita un acceso práctico para familias del entorno de Santiago de Querétaro.`,
-        galeria: [],
+        galeria: [
+            { src: "../assets/galerias/MoisesPatio.jpeg", titulo: "Patio del plantel" },
+            { src: "../assets/galerias/MoisesJuegos.jpeg", titulo: "Área de juegos" }
+        ],
         videos: []
     }
 ];

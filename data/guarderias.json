@@ -13,7 +13,16 @@
     "direccion": "",
     "googleMaps": "https://maps.app.goo.gl/vptgti4Lck47uo9G8",
     "descripcion": "",
-    "galeria": [],
+    "galeria": [
+      {
+        "src": "assets/galerias/BQpatio.jpeg",
+        "titulo": "Patio del plantel"
+      },
+      {
+        "src": "assets/galerias/BQjuegos.jpeg",
+        "titulo": "Área de juegos"
+      }
+    ],
     "videos": []
   },
   {
@@ -79,7 +88,7 @@
     "colorBorde": "#80cbc4",
     "imagen": "assets/guarderias/SanJoseDeLosOlvera.png",
     "direccion": "",
-    "googleMaps": "https://share.google/DgXyWwitHjDxFrDGT",
+    "googleMaps": "https://maps.app.goo.gl/scvPeN53kNtzxLbZ8",
     "descripcion": "",
     "galeria": [],
     "videos": []
@@ -91,14 +100,23 @@
     "telefono": "4426290003",
     "telefonoFormato": "(442) 629-0003",
     "colorNombre": "Amarillo",
-    "colorHex": "#d97706",
-    "colorBg": "#fef3c7",
-    "colorBorde": "#fcd34d",
+    "colorHex": "#b4533c",
+    "colorBg": "#fff1ed",
+    "colorBorde": "#fdbaaa",
     "imagen": "assets/guarderias/MoisesSolana.png",
     "direccion": "",
     "googleMaps": "https://maps.app.goo.gl/g1tLVcn31XMWoost5",
     "descripcion": "",
-    "galeria": [],
+    "galeria": [
+      {
+        "src": "assets/galerias/MoisesPatio.jpeg",
+        "titulo": "Patio del plantel"
+      },
+      {
+        "src": "assets/galerias/MoisesJuegos.jpeg",
+        "titulo": "Área de juegos"
+      }
+    ],
     "videos": []
   }
 ]

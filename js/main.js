@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     guarderias.forEach(guarderia => {
         const tarjeta = document.createElement("article");
         tarjeta.className = "tarjeta-guarderia";
+        tarjeta.dataset.plantel = guarderia.id;
         tarjeta.style.setProperty("--color-acento", guarderia.colorHex);
         tarjeta.style.setProperty("--color-acento-bg", guarderia.colorBg);
         tarjeta.style.setProperty("--color-acento-borde", guarderia.colorBorde);
