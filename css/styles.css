@@ -1450,6 +1450,54 @@ body {
     color: #cbd5e1;
 }
 
+.pie-redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pie-redes a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    color: #cbd5e1;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.pie-redes a:hover,
+.pie-redes a:focus-visible {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.34);
+}
+
+.pie-redes svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 17px;
+    fill: currentColor;
+}
+
+.pie-redes rect,
+.pie-redes circle:not(.instagram-punto) {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+}
+
+.pie-redes .instagram-punto {
+    fill: currentColor;
+    stroke: none;
+}
+
 .pie-copyright {
     font-size: 0.85rem;
     color: #94a3b8;
